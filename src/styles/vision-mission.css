@@ -1,0 +1,9 @@
+.vmv-section { padding: 2rem 4rem; --text-primary: 2.6rem; --text-secondary: 3.2rem; background-image: radial-gradient(80rem 34rem at 10% -10%, rgba(255,255,255,0.04), transparent 60%), linear-gradient(180deg, rgba(31,195,255,0.10), rgba(31,195,255,0) 45%), radial-gradient(48rem 20rem at 0% 100%, rgba(31,195,255,0.06), transparent 60%), radial-gradient(40rem 16rem at 100% 0%, rgba(31,195,255,0.045), transparent 60%); }
+.vmv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.vmv-grid .card { background: var(--primaryBg); border-radius: 16px; padding: 1rem; box-shadow: 0 0 30px rgba(0,0,0,.25) inset, 0 0 28px rgba(31,195,255,0.10) inset; }
+.vmv-grid h2 { margin: 0 0 .5rem; }
+.vmv-grid .bullets { margin: 0; padding-left: 1rem; }
+
+@media (max-width: 900px) {
+	.vmv-grid { grid-template-columns: 1fr; }
+}

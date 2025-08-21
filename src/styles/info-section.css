@@ -1,0 +1,73 @@
+.hero-section {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 2.5rem;
+	background-image: radial-gradient(80rem 36rem at 10% -10%, rgba(255,255,255,0.05), transparent 60%), radial-gradient(60rem 30rem at 90% 110%, rgba(125,17,248,0.06), transparent 60%);
+}
+
+/* Hero navigation tiles */
+.hero-nav { margin-top: 1.25rem; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(140px, 1fr); gap: .75rem; align-items: center; }
+.hero-tile { text-decoration: none; color: inherit; text-align: center; padding: .75rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,.08); background: var(--primaryBg); box-shadow: 0 0 20px rgba(0,0,0,.25) inset; transition: transform .15s ease, box-shadow .15s ease; font-size: 1rem; }
+.hero-tile:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.3), 0 0 20px rgba(0,0,0,.25) inset; }
+.tile-purple { --tile: rgba(125,17,248,0.55); box-shadow: 0 0 20px var(--tile) inset; }
+.tile-teal { --tile: rgba(31,195,255,0.45); box-shadow: 0 0 20px var(--tile) inset; }
+.tile-yellow { --tile: rgba(255,214,10,0.45); box-shadow: 0 0 20px var(--tile) inset; }
+.tile-orange { --tile: rgba(255, 140, 0, 0.45); box-shadow: 0 0 20px var(--tile) inset; }
+.tile-grey { --tile: rgba(180,180,180,0.35); box-shadow: 0 0 20px var(--tile) inset; }
+
+@media screen and (max-width: 900px) {
+	.hero-nav { grid-auto-flow: row; grid-template-columns: repeat(2, minmax(140px, 1fr)); justify-items: center; }
+}
+
+.hero-section .name {
+	font-size: 7rem;
+	color: rgb(31, 195, 255);
+}
+
+.blur {
+	height: 12rem;
+	width: 12rem;
+	background-color: hsl(196, 100%, 56%, 0.7);
+	filter: blur(100px);
+	border-radius: 100px;
+	z-index: -1;
+	position: absolute;
+}
+
+.bottom-bar {
+	border-radius: 13px;
+	color: var(--primaryFg);
+	font-size: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: 20px;
+	gap: 10px;
+}
+
+@media screen and (max-width: 700px) {
+	.hero-section {
+		font-size: 2rem;
+	}
+	.hero-section .name {
+		font-size: 4rem;
+	}
+
+	.bottom-bar {
+		gap: 5px;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.hero-section .name {
+		font-size: 3rem;
+	}
+
+	.bottom-bar {
+		gap: 2px;
+	}
+}

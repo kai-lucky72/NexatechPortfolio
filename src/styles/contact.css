@@ -1,0 +1,32 @@
+.contact-section { padding: 2rem 4rem; --text-primary: 2.6rem; --text-secondary: 3.2rem; background-image: radial-gradient(80rem 34rem at 10% -10%, rgba(255,255,255,0.04), transparent 60%), linear-gradient(180deg, rgba(180,180,180,0.10), rgba(180,180,180,0) 45%), radial-gradient(46rem 20rem at 0% 30%, rgba(180,180,180,0.06), transparent 60%), radial-gradient(40rem 16rem at 100% 70%, rgba(180,180,180,0.045), transparent 60%); border-top: 1px solid rgba(180,180,180,0.35); }
+.contact-form { display: flex; flex-direction: column; gap: .9rem; max-width: 640px; margin-top: 1rem; }
+.contact-form input, .contact-form textarea { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.08); color: var(--primaryFg); padding: .75rem 1rem; border-radius: 12px; outline: none; }
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(255,255,255,0.55); }
+.contact-form input:focus, .contact-form textarea:focus { border-color: rgba(0,160,220,0.55); box-shadow: 0 0 0 4px rgba(0,160,220,0.12); }
+.contact-form button { align-self: flex-start; margin-top: .25rem; }
+
+/* CTA block under form */
+.contact-cta { margin-top: 2rem; max-width: 860px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 1.25rem 1.25rem; border-radius: 16px; }
+.contact-cta .cta-heading { font-weight: 600; margin: 0 0 .5rem; color: var(--primaryFg); }
+.contact-cta .cta-copy { margin: 0 0 1rem; color: rgba(255,255,255,0.8); line-height: 1.6; }
+.support-actions { display: flex; gap: .75rem; flex-wrap: wrap; }
+
+/* Outline variant for buttons */
+.member-more.outline { background: transparent; border: 1px solid rgba(255,255,255,0.35); color: var(--primaryFg); }
+.member-more.outline:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.55); }
+
+/* Phone row */
+.contact-phone { margin-top: .5rem; margin-bottom: .5rem; }
+.contact-phone .phone-number { color: rgb(0,160,220); font-weight: 800; letter-spacing: .3px; }
+
+/* WhatsApp variant */
+.member-more.whatsapp { 
+  background: linear-gradient(180deg, rgba(37,211,102,0.9), rgba(11,131,60,0.9)); 
+  color: #0b1b12; 
+  border: 1px solid rgba(37,211,102,0.65);
+  box-shadow: 0 8px 24px rgba(37,211,102,0.25);
+}
+.member-more.whatsapp:hover { 
+  filter: brightness(1.05);
+  box-shadow: 0 10px 28px rgba(37,211,102,0.35);
+}

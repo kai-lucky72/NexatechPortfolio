@@ -1,0 +1,148 @@
+.floating-btn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	text-decoration: none;
+	color: inherit;
+	height: 50px;
+	width: 160px;
+	z-index: 9999;
+	background-color: transparent;
+	outline: none;
+	border: none;
+}
+
+.floating-btn div {
+	height: 50px;
+	width: 160px;
+	border: none;
+	border-radius: 13px;
+	/* Variant-driven colors with sensible fallbacks */
+	background-color: var(--btnBg, var(--primaryBg));
+	box-shadow: 0px -3px 15px 0px var(--btnHi, var(--primaryHi)) inset;
+	color: var(--btnFg, var(--primaryFg));
+	font-size: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	transform: translateY(0px);
+	transition: all 0.2s ease;
+	animation: anim 5s linear infinite;
+}
+
+.floating-btn span {
+	width: 100px;
+	height: 60px;
+	background-color: var(--btnHi, var(--primaryHi));
+	border-radius: 100%;
+	filter: blur(20px);
+	position: absolute;
+	bottom: -50%;
+	transition: all 0.2s ease;
+}
+
+/* Inline variant for in-card buttons (not floating, not absolute) */
+.floating-btn.inline {
+	position: static;
+	display: inline-flex;
+	width: auto;
+	height: auto;
+	z-index: auto;
+	margin: 6px 6px 0 0;
+}
+.floating-btn.inline > div {
+	height: 40px;
+	min-width: 120px;
+	padding: 0 14px;
+	animation: none;
+}
+.floating-btn.inline > span { display: none; }
+
+.floating-btn:hover > span {
+	bottom: -40%;
+	filter: blur(18px);
+	scale: 1.2;
+}
+
+.floating-btn:hover > div {
+	transform: translateY(5px);
+}
+
+.floating-btn.no-hover:hover > span {
+	bottom: -50%;
+	filter: blur(20px);
+	scale: 1;
+}
+
+.floating-btn.no-hover:hover > div {
+	transform: translateY(0);
+}
+
+.floating-btn.first {
+	top: 12%;
+	left: 15%;
+}
+
+.floating-btn.first > div {
+	background-color: var(--accentBg);
+	box-shadow: 0px -3px 15px 0px var(--accentHi) inset;
+}
+
+.floating-btn.first > span {
+	background-color: hsla(200, 88%, 46%, 0.475);
+}
+
+.floating-btn.sec {
+	bottom: 20%;
+	right: 15%;
+}
+
+.floating-btn.sec > button {
+	background-color: var(--accentBg);
+	box-shadow: 0px -3px 15px 0px var(--accentHi) inset;
+	color: var(--accentFg);
+}
+
+.floating-btn.sec > span {
+	background-color: var(--accentHi);
+}
+
+/* Position presets for additional boxes */
+.floating-btn.pos-1 { top: 10%; left: 4%; }
+.floating-btn.pos-2 { top: 12%; right: 4%; }
+.floating-btn.pos-3 { top: 10%; left: 40%; }
+.floating-btn.pos-4 { top: 48%; right: 3%; }
+.floating-btn.pos-5 { bottom: 22%; left: 4%; }
+.floating-btn.pos-6 { bottom: 20%; right: 6%; }
+.floating-btn.pos-7 { top: 65%; left: 3%; }
+.floating-btn.pos-8 { top: 68%; right: 3%; }
+.floating-btn.pos-9 { bottom: 12%; left: 6%; }
+.floating-btn.pos-10 { bottom: 10%; right: 4%; }
+
+/* Color variants using CSS variables */
+.floating-btn.variant-blue { --btnBg: #0f2437; --btnHi: rgba(0,160,220,0.6); --btnFg: #e8f4ff; }
+.floating-btn.variant-green { --btnBg: #0e2a1b; --btnHi: rgba(0,237,100,0.6); --btnFg: #e7ffef; }
+.floating-btn.variant-purple { --btnBg: #1a0d2b; --btnHi: rgba(125,17,248,0.55); --btnFg: #f3e8ff; }
+.floating-btn.variant-yellow { --btnBg: #2a250e; --btnHi: rgba(255,214,10,0.5); --btnFg: #fff9db; }
+.floating-btn.variant-red { --btnBg: #2a0e10; --btnHi: rgba(255, 99, 71, 0.6); --btnFg: #ffeaea; }
+.floating-btn.variant-grey { --btnBg: #1f1f1f; --btnHi: rgba(180,180,180,0.35); --btnFg: #f0f0f0; }
+.floating-btn.variant-white { --btnBg: #2b2b2b; --btnHi: rgba(255,255,255,0.4); --btnFg: #ffffff; }
+
+/* Keep floating buttons absolute on all screens to preserve floating feel */
+
+@media (max-width: 900px) {
+	/* push further to edges on small screens to avoid covering text */
+	.floating-btn.pos-1 { top: 6%; left: 2%; }
+	.floating-btn.pos-2 { top: 8%; right: 2%; }
+	.floating-btn.pos-3 { top: 8%; left: 38%; }
+	.floating-btn.pos-4 { top: 42%; right: 2%; }
+	.floating-btn.pos-5 { bottom: 20%; left: 2%; }
+	.floating-btn.pos-6 { bottom: 18%; right: 2%; }
+	.floating-btn.pos-7 { top: 70%; left: 2%; }
+	.floating-btn.pos-8 { top: 72%; right: 2%; }
+	.floating-btn.pos-9 { bottom: 10%; left: 2%; }
+	.floating-btn.pos-10 { bottom: 8%; right: 2%; }
+}

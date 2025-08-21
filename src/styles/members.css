@@ -1,0 +1,12 @@
+.members-section { padding: 2rem 4rem; --text-primary: 2.6rem; --text-secondary: 3.2rem; background-image: radial-gradient(80rem 34rem at 10% -10%, rgba(255,255,255,0.04), transparent 60%), linear-gradient(180deg, rgba(255,99,71,0.10), rgba(255,99,71,0) 45%), radial-gradient(50rem 22rem at 0% 40%, rgba(255,99,71,0.06), transparent 60%), radial-gradient(40rem 16rem at 100% 60%, rgba(255,99,71,0.045), transparent 60%); border-top: 1px solid rgba(255,99,71,0.35); }
+.members-grid { display: grid; grid-template-columns: repeat(3, minmax(220px, 1fr)); gap: 1rem; }
+
+.member-card { background: var(--primaryBg); border-radius: 16px; padding: 1rem; border: 1px solid rgba(255,255,255,.08); box-shadow: 0 0 22px rgba(0,0,0,.12) inset, 0 0 20px rgba(255,99,71,0.10) inset; display: flex; gap: 1rem; align-items: center; }
+.avatar { width: 72px; height: 72px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.95), rgba(225,225,225,.2)); border: 1px solid rgba(255,255,255,.35); display: grid; place-items: center; font-weight: 700; color: #0f2437; }
+.member-meta h3 { margin: 0 0 .25rem; }
+.member-meta .role { margin: 0 0 .5rem; opacity: .9; }
+.member-meta .socials { display: flex; gap: 8px; }
+
+@media (max-width: 900px) {
+	.members-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,12 @@
+.why-section {
+  padding: 2rem 4rem;
+  /* Smaller section title for Why NexaTech */
+  --text-primary: 2.6rem;
+  --text-secondary: 3.2rem;
+  background-image: radial-gradient(80rem 34rem at 10% -10%, rgba(255,255,255,0.04), transparent 60%), linear-gradient(180deg, rgba(255,214,10,0.10), rgba(255,214,10,0) 45%), radial-gradient(46rem 20rem at 0% 40%, rgba(255,214,10,0.06), transparent 60%), radial-gradient(40rem 16rem at 100% 60%, rgba(255,214,10,0.045), transparent 60%);
+  border-top: 1px solid rgba(255,214,10,0.35);
+}
+.why-section .intro {
+  margin: 1rem 0 1.5rem;
+  opacity: .9;
+}

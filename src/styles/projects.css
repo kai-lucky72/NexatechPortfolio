@@ -1,0 +1,16 @@
+.projects-section { padding: 2rem 4rem; --text-primary: 2.6rem; --text-secondary: 3.2rem; background-image: radial-gradient(80rem 34rem at 10% -10%, rgba(255,255,255,0.04), transparent 60%), linear-gradient(180deg, rgba(0,237,100,0.10), rgba(0,237,100,0) 45%), radial-gradient(52rem 22rem at 0% 50%, rgba(0,237,100,0.06), transparent 60%), radial-gradient(42rem 18rem at 100% 30%, rgba(0,237,100,0.045), transparent 60%); border-top: 1px solid rgba(0,237,100,0.35); }
+.projects-grid { display: grid; grid-template-columns: repeat(3, minmax(220px, 1fr)); gap: 1rem; }
+
+.project-card { text-decoration: none; color: inherit; background: var(--primaryBg); border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,.08); box-shadow: 0 0 24px rgba(0,0,0,.12) inset, 0 0 22px rgba(0,237,100,0.08) inset; transition: transform .2s ease, box-shadow .2s ease; }
+.project-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,.25), 0 0 22px rgba(0,237,100,0.10) inset; }
+
+.project-thumb { height: 160px; background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(180,180,180,0.25) 100%); display: grid; place-items: center; }
+.project-thumb .img { width: 72px; height: 72px; border-radius: 16px; background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.95), rgba(225,225,225,.2)); border: 1px solid rgba(255,255,255,.35); }
+
+.project-meta { padding: 1rem; }
+.project-meta h3 { margin: 0 0 .35rem; }
+.project-meta p { margin: 0; opacity: .9; }
+
+@media (max-width: 900px) {
+	.projects-grid { grid-template-columns: 1fr; }
+}

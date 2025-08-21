@@ -1,0 +1,67 @@
+.tech-stack {
+	min-height: 100vh;
+	display: flex;
+	padding: 2rem 4rem;
+	background-image: radial-gradient(80rem 34rem at 10% -10%, rgba(255,255,255,0.04), transparent 60%), linear-gradient(180deg, rgba(125,17,248,0.10), rgba(125,17,248,0) 45%), radial-gradient(52rem 22rem at 10% 20%, rgba(125,17,248,0.06), transparent 60%), radial-gradient(42rem 18rem at 90% 80%, rgba(125,17,248,0.045), transparent 60%);
+	border-top: 1px solid rgba(125,17,248,0.35);
+}
+
+.tech-stack .title {
+	margin-top: 6rem;
+}
+
+.tech-stack > div {
+	width: 50%;
+	padding: 1rem;
+}
+
+.tech-stack p {
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	line-height: 1.5rem;
+}
+
+.tech-row {
+	display: flex;
+	gap: 1rem;
+	margin: 20px 0px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.tech-grid {
+	display: flex;
+	gap: 1rem;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	font-family: 'Fugaz One', sans-serif;
+}
+
+@media screen and (max-width: 700px) {
+	.tech-stack {
+		padding: 1rem 2rem;
+		flex-direction: column-reverse;
+		gap: 1rem;
+	}
+
+	.tech-stack > div {
+		width: 100%;
+		padding: 0.5rem;
+	}
+
+	.tech-stack .title {
+		margin-top: 2rem;
+		text-align: center;
+	}
+
+	.tech-stack p {
+		font-size: 1.1rem;
+		line-height: 1.5rem;
+	}
+
+	.tech-row {
+		gap: 0.5rem;
+	}
+}

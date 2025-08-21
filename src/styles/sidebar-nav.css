@@ -1,0 +1,116 @@
+/* Slim vertical rail + dots + progress thumb */
+.sidebar-nav.line {
+  position: fixed;
+  left: 14px;
+  top: 10vh;
+  height: 80vh;
+  width: 20px;
+  z-index: 4; /* under floating boxes and most UI */
+  pointer-events: none; /* only dots are clickable */
+}
+
+.sidebar-nav .rail {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(31,195,255,0.45), rgba(31,195,255,0.15));
+  border-radius: 2px;
+  box-shadow: 0 0 12px rgba(31,195,255,0.35);
+  pointer-events: none;
+}
+
+.sidebar-nav .thumb {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 26px;
+  border-radius: 8px;
+  background: rgba(31,195,255,0.8);
+  box-shadow: 0 0 10px rgba(31,195,255,0.7);
+  pointer-events: none;
+}
+
+.sidebar-nav .dots {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-nav .dots li {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sidebar-nav .dots a {
+  position: relative;
+  display: block;
+  width: 20px; /* includes dot + hover area */
+  height: 20px;
+  pointer-events: auto; /* clickable */
+}
+
+.sidebar-nav .dots a .dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(31,195,255,0.25);
+  border: 1px solid rgba(31,195,255,0.45);
+  box-shadow: 0 0 8px rgba(31,195,255,0.35);
+  transition: transform .15s ease, background .15s ease;
+}
+
+.sidebar-nav .dots a:hover .dot,
+.sidebar-nav .dots a:focus-visible .dot {
+  transform: translate(-50%, -50%) scale(1.15);
+  background: rgba(31,195,255,0.4);
+}
+
+.sidebar-nav .dots a.active .dot {
+  background: rgba(31,195,255,0.85);
+  box-shadow: 0 0 10px rgba(31,195,255,0.8);
+}
+
+/* Labels: appear when hovering the sidebar or focusing a dot */
+.sidebar-nav .dots a .label {
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  transform: translateY(-50%) translateX(6px);
+  white-space: nowrap;
+  font-size: 12px;
+  line-height: 1;
+  color: #e9f6ff;
+  background: rgba(31,195,255,0.18);
+  border: 1px solid rgba(31,195,255,0.35);
+  border-radius: 8px;
+  padding: 6px 8px;
+  box-shadow: 0 0 10px rgba(31,195,255,0.25);
+  opacity: 0;
+  pointer-events: none; /* do not block */
+  transition: opacity .15s ease, transform .15s ease;
+}
+
+.sidebar-nav.line:hover .dots a .label,
+.sidebar-nav .dots a:hover .label,
+.sidebar-nav .dots a:focus-visible .label {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+@media (max-width: 900px) {
+  .sidebar-nav { display: none; }
+}
