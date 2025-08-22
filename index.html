@@ -78,6 +78,16 @@
 	</head>
 	<body>
 		<div id="root"></div>
+		<!-- Vercel Speed Insights (performance metrics) -->
+		<script defer src="/_vercel/insights/script.js"></script>
+		<!-- Vercel Web Analytics (privacy-friendly page analytics) -->
+		<script defer src="/_vercel/analytics/script.js"></script>
+		<!-- Record pageview on hash navigation for single-page anchors -->
+		<script>
+			window.addEventListener('hashchange', function () {
+				try { if (window.va) window.va('pageview'); } catch (e) {}
+			});
+		</script>
 		<script
 			type="module"
 			src="/src/main.tsx"
