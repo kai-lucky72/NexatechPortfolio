@@ -1,5 +1,5 @@
 .projects-section { padding: 2rem 4rem; --text-primary: 2.6rem; --text-secondary: 3.2rem; background-image: radial-gradient(80rem 34rem at 10% -10%, rgba(255,255,255,0.04), transparent 60%), linear-gradient(180deg, rgba(0,237,100,0.10), rgba(0,237,100,0) 45%), radial-gradient(52rem 22rem at 0% 50%, rgba(0,237,100,0.06), transparent 60%), radial-gradient(42rem 18rem at 100% 30%, rgba(0,237,100,0.045), transparent 60%); border-top: 1px solid rgba(0,237,100,0.35); }
-.projects-grid { display: grid; grid-template-columns: repeat(3, minmax(220px, 1fr)); gap: 1rem; }
+.projects-grid { display: grid; grid-template-columns: repeat(3, minmax(220px, 1fr)); gap: 1rem; align-items: stretch; }
 
 .project-card { text-decoration: none; color: inherit; background: var(--primaryBg); border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,.08); box-shadow: 0 0 24px rgba(0,0,0,.12) inset, 0 0 22px rgba(0,237,100,0.08) inset; transition: transform .2s ease, box-shadow .2s ease; }
 .project-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,.25), 0 0 22px rgba(0,237,100,0.10) inset; }
@@ -12,5 +12,11 @@
 .project-meta p { margin: 0; opacity: .9; }
 
 @media (max-width: 900px) {
+	.projects-section { padding: 1.5rem 1.5rem; }
+	.projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+	.projects-section { padding: 1rem; }
 	.projects-grid { grid-template-columns: 1fr; }
 }
