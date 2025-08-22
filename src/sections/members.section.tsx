@@ -5,11 +5,11 @@ import { SectionTitle } from '../components/section-title.component';
 export type Member = { id: string; name: string; role: string };
 
 export const members: Member[] = [
-	{ id: 'lucky', name: 'Kagabo Irene Lucky', role: 'CEO' },
-	{ id: 'christian', name: 'Isingizwe Christian Bizimana', role: 'COO' },
-	{ id: 'aine', name: 'Dushimire Aine', role: 'CTO' },
-	{ id: 'livia', name: 'Kirezi Livia', role: 'CMO' },
-	{ id: 'theogene', name: 'Niyirera Theogene', role: 'CSO' },
+	{ id: 'lucky', name: 'Kagabo Irene Lucky', role: 'Cheif Executive Officer' },
+	{ id: 'christian', name: 'Isingizwe Christian Bizimana', role: 'Cheif Operating Officer' },
+	{ id: 'aine', name: 'Dushimire Aine', role: 'Cheif Technology Officer' },
+	{ id: 'livia', name: 'Kirezi Livia', role: 'Cheif Marketing Officer' },
+	{ id: 'theogene', name: 'Niyirera Theogene', role: 'Cheif Sales Officer' },
 ];
 
 export const MembersSection = () => {

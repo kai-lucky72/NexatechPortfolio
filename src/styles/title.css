@@ -12,6 +12,46 @@
 	top: 50vh;
 }
 
+/* One-shot underline sweep animation driven by `.pop` class */
+.title { overflow: visible; }
+.title .primary-text { position: relative; }
+.title .primary-text::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.4rem; /* sits just below the primary text */
+    margin: 0 auto;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(142,227,255,0) 0%, rgba(142,227,255,0.85) 40%, rgba(142,227,255,0.85) 60%, rgba(142,227,255,0) 100%);
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+}
+
+.title.pop .primary-text::after {
+    animation: underline-sweep 360ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}
+
+@keyframes underline-sweep {
+    0% { opacity: 0; transform: scaleX(0.2); }
+    40% { opacity: 1; transform: scaleX(1.05); }
+    100% { opacity: 0; transform: scaleX(0.95); }
+}
+
+/* RWANDA (secondary-text) gets a subtle translate/opacity transition */
+.title.pop .secondary-text {
+    animation: title-pop-text 320ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
+    will-change: transform, opacity, filter;
+}
+
+@keyframes title-pop-text {
+    0% { transform: translateY(0.2rem); opacity: 0.92; filter: none; }
+    50% { transform: translateY(-0.1rem); opacity: 1; filter: drop-shadow(0 2px 6px rgba(142,227,255,0.15)); }
+    100% { transform: translateY(0); opacity: 1; filter: none; }
+}
+
 .title .primary-text {
 	color: white;
 	font-size: var(--text-primary);
