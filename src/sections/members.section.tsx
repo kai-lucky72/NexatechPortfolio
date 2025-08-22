@@ -1,15 +1,15 @@
-import { FaWhatsapp, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
 import { GlowLink } from '../components/glow-box-link';
 import { SectionTitle } from '../components/section-title.component';
 
 export type Member = { id: string; name: string; role: string };
 
 export const members: Member[] = [
-	{ id: 'lucky', name: 'Lucky Kagabo Irene', role: 'Founder & Software Engineer' },
-	{ id: 'christian', name: 'Bizimana Isingizwe Christian', role: 'Co-founder & DevOps' },
-	{ id: 'aine', name: 'Aine Dushimire', role: 'Design & Software Engineer' },
-	{ id: 'livia', name: 'Livia Kirezi', role: 'Brand Manager & Outreach Lead' },
-	{ id: 'theogene', name: 'Theogene Niyirera', role: 'Digital sales & Marketing' },
+	{ id: 'lucky', name: 'Kagabo Irene Lucky', role: 'CEO' },
+	{ id: 'christian', name: 'Isingizwe Christian Bizimana', role: 'COO' },
+	{ id: 'aine', name: 'Dushimire Aine', role: 'CTO' },
+	{ id: 'livia', name: 'Kirezi Livia', role: 'CMO' },
+	{ id: 'theogene', name: 'Niyirera Theogene', role: 'CSO' },
 ];
 
 export const MembersSection = () => {

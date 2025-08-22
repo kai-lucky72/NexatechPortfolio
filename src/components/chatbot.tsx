@@ -132,11 +132,11 @@ export function Chatbot() {
       >
         {!open && <span className='tooltip' role='tooltip'>NexaTech AI Assistant</span>}
         {open ? (
-          <IoClose size={20} />
+          <IoClose size={22} />
         ) : (
           <span className='ai-avatar' aria-hidden>
-            <FaRobot size={22} />
-            <PiSparkleBold className='sparkle' size={12} />
+            <FaRobot size={30} />
+            <PiSparkleBold className='sparkle' size={14} />
           </span>
         )}
       </button>
