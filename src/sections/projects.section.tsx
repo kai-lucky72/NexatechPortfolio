@@ -37,7 +37,6 @@ export const ProjectsSection = () => {
 						</div>
 						<div className='project-meta'>
 							<h3>{p.title}</h3>
-							<p>{p.desc}</p>
 						</div>
 					</a>
 				))}
