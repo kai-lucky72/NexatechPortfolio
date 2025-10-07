@@ -1,0 +1,82 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+.env*.local
+.env
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+
+# logs
+logs
+*.log
+
+# temporary files
+*.tmp
+*.temp
+
+# backup files
+*.bak
+*.backup
+
+# Large files to ignore
+*.zip
+*.rar
+*.tar.gz
+*.dmg
+*.iso
+
+# Video backup folder
+video_backup/
+
+# Package manager conflicts
+pnpm-lock.yaml
+yarn.lock
+
+# Videos (temporarily ignore for initial push)
+public/video.mp4
+public/video_testing_1.mp4
+public/video_testing_2.mp4
+
+# Optimization guides (keep local only)
+VIDEO_OPTIMIZATION_GUIDE.md
+QUICK_VIDEO_COMPRESSION_STEPS.md
+video-compressor.html
