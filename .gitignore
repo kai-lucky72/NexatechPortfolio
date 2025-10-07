@@ -72,8 +72,6 @@ pnpm-lock.yaml
 yarn.lock
 
 # Videos (temporarily ignore for initial push)
-public/video.mp4
-public/video_testing_1.mp4
 public/video_testing_2.mp4
 
 # Optimization guides (keep local only)
