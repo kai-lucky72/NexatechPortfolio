@@ -1,0 +1,60 @@
+/* Performance optimizations */
+
+/* Reduce layout shifts */
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Optimize font loading */
+@font-face {
+  font-display: swap;
+}
+
+/* Reduce paint complexity */
+* {
+  box-sizing: border-box;
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Critical CSS for above-the-fold content */
+.hero-section {
+  contain: layout style paint;
+}
+
+/* Optimize scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reduce repaints */
+.video-container {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Optimize images */
+.optimized-image {
+  content-visibility: auto;
+  contain-intrinsic-size: 300px 200px;
+}
+
+/* Lazy loading styles */
+.lazy-load {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lazy-load.loaded {
+  opacity: 1;
+}

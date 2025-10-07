@@ -10,19 +10,17 @@ export function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
-    // Force video to play when component mounts
-    const playVideo = async () => {
+    // Lazy load video after critical content loads
+    const timer = setTimeout(() => {
       if (videoRef.current) {
-        try {
-          await videoRef.current.play()
-
-        } catch (error) {
-          // Auto-play failed silently
-        }
+        videoRef.current.load()
+        videoRef.current.play().catch(() => {
+          // Silently fail - poster will show
+        })
       }
-    }
+    }, 2000) // Delay video loading by 2 seconds
 
-    playVideo()
+    return () => clearTimeout(timer)
   }, [])
   return (
     <section className="relative min-h-[600px] overflow-hidden bg-background pb-64 pt-16">
@@ -40,22 +38,17 @@ export function HeroSection() {
           muted
           loop
           playsInline
-          preload="auto"
+          preload="none"
           className="h-full w-full object-cover opacity-80"
+          poster="/digital-globe-network-connections-dark-blue.jpg"
           onLoadedData={() => {
-            // Ensure video plays when loaded
             if (videoRef.current) {
               videoRef.current.play().catch(console.error)
             }
           }}
         >
           <source src="/video_testing_1.mp4" type="video/mp4" />
-          {/* Fallback to original image if video fails */}
-          <img
-            src="/digital-globe-network-connections-dark-blue.jpg"
-            alt=""
-            className="h-full w-full object-cover opacity-40"
-          />
+          Your browser does not support the video tag.
         </video>
       </motion.div>
 

@@ -10,6 +10,7 @@ import { ContactCTASection } from "@/components/contact-cta-section"
 import { TeamSection } from "@/components/team-section"
 import { BlogSection } from "@/components/blog-section"
 import { Footer } from "@/components/footer"
+import { LazySection } from "@/components/lazy-section"
 import { useState, useEffect } from "react"
 import { supabase } from "@/lib/supabase"
 
@@ -37,27 +38,45 @@ export default function HomePage() {
   return (
       <main className="min-h-screen overflow-x-hidden">
       <HeroSection />
-      <section id="services">
-        <ServicesSection />
-      </section>
-      <section id="about">
-        <AboutSection />
-      </section>
-      <AboutStatsSection />
-      <section id="portfolio">
-        <PortfolioSection />
-      </section>
-      <HowWeWorkSection />
-      <TestimonialsSection />
-      <TeamSection />
-      {hasBlogPosts && (
-        <section id="blog">
-          <BlogSection />
+      <LazySection>
+        <section id="services">
+          <ServicesSection />
         </section>
+      </LazySection>
+      <LazySection>
+        <section id="about">
+          <AboutSection />
+        </section>
+      </LazySection>
+      <LazySection>
+        <AboutStatsSection />
+      </LazySection>
+      <LazySection>
+        <section id="portfolio">
+          <PortfolioSection />
+        </section>
+      </LazySection>
+      <LazySection>
+        <HowWeWorkSection />
+      </LazySection>
+      <LazySection>
+        <TestimonialsSection />
+      </LazySection>
+      <LazySection>
+        <TeamSection />
+      </LazySection>
+      {hasBlogPosts && (
+        <LazySection>
+          <section id="blog">
+            <BlogSection />
+          </section>
+        </LazySection>
       )}
-      <section id="contact">
-        <ContactCTASection />
-      </section>
+      <LazySection>
+        <section id="contact">
+          <ContactCTASection />
+        </section>
+      </LazySection>
       <Footer variant="primary" />
     </main>
   )
