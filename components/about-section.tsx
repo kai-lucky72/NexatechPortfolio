@@ -33,7 +33,7 @@ export function AboutSection() {
               <span className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold">About Us</span>
             </div>
 
-            <h2 className="text-5xl font-bold text-foreground leading-tight text-balance">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight text-balance">
               Who Are We? The Brain Of Africa's Tech Ecosystem
             </h2>
 
@@ -41,7 +41,7 @@ export function AboutSection() {
               At NexaTech Rwanda, we are more than just a tech company—we are the architects of Africa's digital future. As Rwanda's emerging tech powerhouse, we create comprehensive technology solutions that transform businesses across Africa while working hand-in-hand with governments to elevate citizen welfare and drive national development.
             </p>
 
-            <div className="grid gap-8 md:grid-cols-2 md:items-center">
+            <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 md:items-center">
               {/* Auto-playing Video (left) */}
               <div className="relative aspect-square w-full max-w-[260px] md:max-w-none rounded-2xl overflow-hidden">
                 <video

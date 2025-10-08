@@ -61,10 +61,10 @@ export function HeroSection() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="mb-6 text-balance text-5xl font-bold leading-tight text-gray-900 dark:text-white md:text-6xl lg:text-7xl drop-shadow-lg">
+          <h1 className="mb-6 text-balance text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-gray-900 dark:text-white drop-shadow-lg">
             Building Africa's Tech Ecosystem From Rwanda
           </h1>
-          <p className="mb-8 text-pretty text-lg text-gray-800 dark:text-white/90 md:text-xl drop-shadow-md">
+          <p className="mb-8 text-pretty text-base sm:text-lg md:text-xl text-gray-800 dark:text-white/90 drop-shadow-md max-w-3xl mx-auto">
             Transform Africa's digital landscape with NexaTech Rwanda's innovative solutions. We're creating the tech ecosystem that will make Rwanda the brain of Africa's technological revolution. Ready to be part of the future?
           </p>
           <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>

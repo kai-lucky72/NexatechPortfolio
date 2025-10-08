@@ -21,12 +21,12 @@ export function ContactCTASection() {
               Join Africa's Tech Revolution—Start Today!
             </h2>
 
-            <div className="grid grid-cols-3 gap-4 mb-8">
-              <div className="flex items-center gap-3 rounded-full bg-card px-2 py-1 text-foreground shadow-lg">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+              <div className="flex items-center gap-3 rounded-full bg-card px-3 py-2 text-foreground shadow-lg">
                 <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary text-primary-foreground">
                   <CheckCircle className="h-4 w-4" />
                 </span>
-                <span className="font-semibold">24/7 Online Support</span>
+                <span className="font-semibold text-sm sm:text-base">24/7 Online Support</span>
               </div>
               <div className="flex items-center gap-3 rounded-full bg-card px-2 py-1 text-foreground shadow-lg">
                 <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary text-primary-foreground">
