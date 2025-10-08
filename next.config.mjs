@@ -6,6 +6,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+
   // Enable image optimization for better performance
   images: {
     formats: ['image/webp', 'image/avif'],
