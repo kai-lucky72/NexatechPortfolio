@@ -9,8 +9,13 @@ import "../styles/performance.css"
 import { Navigation } from "@/components/navigation"
 import { ThemeProvider } from "@/components/theme-provider"
 import { AIChatbot } from "@/components/ai-chatbot"
-import { PerformanceMonitor } from "@/components/performance-monitor"
 
+
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
 
 export const metadata: Metadata = {
   title: "NexaTech Rwanda - Africa's Next Tech Hub",
@@ -18,13 +23,19 @@ export const metadata: Metadata = {
   generator: "v0.app",
   keywords: "Rwanda tech, Africa technology, web development, mobile apps, AI solutions, digital transformation",
   authors: [{ name: "NexaTech Rwanda" }],
-  viewport: "width=device-width, initial-scale=1",
+
   robots: "index, follow",
+  icons: {
+    icon: '/nexatech_logo.png',
+    shortcut: '/nexatech_logo.png',
+    apple: '/nexatech_logo.png',
+  },
   openGraph: {
     title: "NexaTech Rwanda - Africa's Next Tech Hub",
     description: "Building Africa's Tech Ecosystem From Rwanda",
     type: "website",
     locale: "en_US",
+    images: ['/nexatech_logo.png'],
   },
 }
 
@@ -42,7 +53,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <PerformanceMonitor />
+
           <Navigation />
           <Suspense fallback={<div className="min-h-screen bg-background" />}>
             {children}

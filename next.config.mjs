@@ -18,7 +18,8 @@ const nextConfig = {
   // Performance optimizations
   experimental: {
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-    optimizeCss: true,
+    // Disable optimizeCss to fix critters error
+    // optimizeCss: true,
   },
   // Compression and caching
   compress: true,
