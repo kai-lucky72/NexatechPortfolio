@@ -26,9 +26,19 @@ export const metadata: Metadata = {
 
   robots: "index, follow",
   icons: {
-    icon: '/nexatech_logo.png',
-    shortcut: '/nexatech_logo.png',
-    apple: '/nexatech_logo.png',
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/nexatech_logo.png', sizes: '192x192', type: 'image/png' },
+    ],
+    shortcut: '/favicon-32x32.png',
+    apple: '/apple-touch-icon.png',
+    other: [
+      {
+        rel: 'icon',
+        url: '/nexatech_logo.png',
+      },
+    ],
   },
   openGraph: {
     title: "NexaTech Rwanda - Africa's Next Tech Hub",
@@ -46,6 +56,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="/nexatech_logo.png" />
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
