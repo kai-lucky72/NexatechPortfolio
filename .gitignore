@@ -27,7 +27,6 @@ yarn-error.log*
 
 # local env files
 .env*.local
-.env
 
 # vercel
 .vercel
@@ -37,7 +36,6 @@ yarn-error.log*
 next-env.d.ts
 
 # IDE
-.vscode/
 .idea/
 *.swp
 *.swo
@@ -80,3 +78,4 @@ public/video_testing_2.mp4
 VIDEO_OPTIMIZATION_GUIDE.md
 QUICK_VIDEO_COMPRESSION_STEPS.md
 video-compressor.html
+config.bat

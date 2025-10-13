@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+// Force fresh deployment after revert
 const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
